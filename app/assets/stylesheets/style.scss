@@ -1,0 +1,170 @@
+$font-color: #333;
+$header-height: 56px;
+$link-default: #1a0dab;
+$max-width: 600px;
+$site-name-size: 1.5rem;
+$shadow: 3px 3px 6px 0 rgba(25, 25, 25, .2);
+$sp-inner-width: 400px;
+
+body {
+  color: $font-color;
+  font-family: sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $font-color; 
+  letter-spacing: .3px;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: .8;
+}
+
+p {
+  letter-spacing: .3px;
+  line-height: 1.5;
+}
+
+textarea {
+  resize: none;
+}
+
+/* header */
+header {
+  background-color: #fff;
+  border: 1px solid lightgray;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  display: inline-block;
+  font-size: $site-name-size;
+  padding: 15px;
+}
+
+/* main */
+.main {
+  padding-top: $header-height;
+  padding-bottom: 40px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 4;
+}
+
+.post-opener {
+  background-color: skyblue;
+  border-radius: 20px;
+  box-shadow: $shadow;
+  display: block;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+/* root_path(posts) */
+.post-container {
+  margin-top: 2.25rem;
+}
+
+.post-box {
+  padding: .5rem;
+  border-top: 1px solid lightgray;
+}
+
+.post-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: .25rem;
+}
+
+/* posts/new */
+.form-box, #post_title, #post_content {
+  max-width: $sp-inner-width;
+  width: 100%;
+}
+
+.form-box {
+  margin: 0 auto;
+}
+
+#post_title, #post_content, .btn-post {
+  padding: .5rem;
+  font-size: 14px;
+}
+
+.btn-post {
+  width: 100%;
+  border: none;
+  letter-spacing: 2px;
+  background-color: skyblue;
+  &:hover {
+    cursor: pointer;
+    opacity: .8;
+  }
+}
+
+input[name="post[title]"], textarea[name="post[content]"] {
+  border: 1px solid lightgray;
+  &:focus {
+    outline: 0;
+  }
+}
+
+/* contact */
+.contact-link {
+  color: $link-default;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* footer */
+footer {
+  border: 1px solid lightgray;
+  font-size: 14px;
+}
+
+.footer-ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $max-width;
+}
+
+.footer-link {
+  display: inline-block;
+  padding: 15px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  opacity: .8;
+}
+
+
+@media all and (min-width: 501px) {
+  .footer-ul {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,9 @@
+<div class="post-container">
+  <%= @posts.each do |post| %>
+    <div class="post-box">
+      <p class="post-title"><%= post.title %></p>
+      <p class="post-content"><%= post.content %></p>
+    </div>
+  <% end %>
+</div>
+<%= link_to "＋", new_post_path, class: "post-opener" %>

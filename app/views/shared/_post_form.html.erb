@@ -1,0 +1,7 @@
+<div class="form-box">
+  <%= form_with model: @post do |form| %>
+    <%= form.text_field :title, placeholder: "タイトル(32字以内)" %>
+    <%= form.text_area :content, placeholder: "聞きたいこと(140字以内)" %>
+    <%= form.submit "投稿", class: "btn-post" %>
+  <% end %>
+</div>
